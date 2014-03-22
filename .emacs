@@ -1,3 +1,11 @@
+;initialize packages 
+(require 'package)
+(package-initialize)
+
+;add package repo
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+
 ;
 (add-to-list 'load-path "~/.emacs.d")
 (load "init")
@@ -12,7 +20,7 @@
 (ido-mode t)
 
 ;Python mode setup
-(setq py-install-directory "~/.emacs.d/python-mode-6.0.11")
+(setq py-install-directory "~/.emacs.d/python-mode.el-6.1.0")
 (add-to-list 'load-path py-install-directory)
 (require 'python-mode)
 
@@ -26,7 +34,7 @@
 (setq py-force-py-shell-name-p t)
 
 ; switch to the interpreter after executing code
-(setq py-shell-switch-buffers-on-execute-p t)
-(setq py-switch-buffers-on-execute-p t)
-(setq py-split-windows-on-execute-p nil) ; don't split windowsmode
-(setq py-smart-indentation t) ; try to automagically figure out indentation
+;(setq py-shell-switch-buffers-on-execute-p t)
+;(setq py-switch-buffers-on-execute-p t)
+;(setq py-split-windows-on-execute-p nil) ; don't split windowsmode
+;(setq py-smart-indentation t) ; try to automagically figure out indentation

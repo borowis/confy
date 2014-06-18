@@ -19,6 +19,14 @@
 (require 'ido)
 (ido-mode t)
 
+;; load jde mode
+(add-to-list 'load-path "~/.emacs.d/jdee-2.4.1/lisp")
+(load "jde")
+
+;; load jad decompiler plugin
+(add-to-list 'load-path "~/.emacs.d/jdc1.0")
+(require 'jdc)
+
 ;Python mode setup
 (setq py-install-directory "~/.emacs.d/python-mode.el-6.1.0")
 (add-to-list 'load-path py-install-directory)
